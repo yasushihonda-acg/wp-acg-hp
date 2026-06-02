@@ -1,0 +1,298 @@
+/* ============================================
+   あおぞらケアグループ (A.C.G) 会社概要ページ
+   仮公開サイト スタイルシート
+   ============================================ */
+
+:root {
+  --color-text: #2b2b2b;
+  --color-text-sub: #5a5a5a;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f6f7f9;
+  --color-border: #e3e5ea;
+  --color-accent: #5b8cb8;
+  --color-accent-dark: #3b6c98;
+  --color-new: #d96a4a;
+  --font-base: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "Noto Sans JP", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --container-max: 960px;
+  --radius: 6px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a {
+  color: var(--color-accent-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Header ===== */
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  color: var(--color-text);
+}
+
+.brand-main {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.brand-sub {
+  font-size: 13px;
+  color: var(--color-text-sub);
+}
+
+.global-nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.global-nav a {
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(180deg, #f6f7f9 0%, #ffffff 100%);
+  padding: 64px 0 48px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.hero-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  letter-spacing: 0.05em;
+}
+
+.hero-lead {
+  font-size: 15px;
+  color: var(--color-text-sub);
+  margin: 0 0 12px;
+  max-width: 720px;
+}
+
+.hero-note {
+  font-size: 13px;
+  color: var(--color-text-sub);
+  margin: 16px 0 0;
+  padding: 12px 16px;
+  background: #fff;
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* ===== Section ===== */
+.section {
+  padding: 56px 0;
+}
+
+.section-alt {
+  background: var(--color-bg-alt);
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-accent);
+  display: inline-block;
+}
+
+.section-lead {
+  font-size: 14px;
+  color: var(--color-text-sub);
+  margin: 16px 0 32px;
+}
+
+/* ===== Company Card / Table ===== */
+.company-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin: 24px 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.company-card-new {
+  border-color: var(--color-new);
+  box-shadow: 0 2px 8px rgba(217, 106, 74, 0.12);
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge-new {
+  display: inline-block;
+  background: var(--color-new);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.company-table th,
+.company-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.company-table tr:last-child th,
+.company-table tr:last-child td {
+  border-bottom: none;
+}
+
+.company-table th {
+  width: 32%;
+  color: var(--color-text-sub);
+  font-weight: 600;
+  background: #fafbfc;
+  white-space: nowrap;
+}
+
+.company-table td {
+  color: var(--color-text);
+}
+
+.biz-list {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.biz-list li {
+  margin: 2px 0;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 32px 0;
+  background: #fff;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-sub);
+}
+
+.site-footer p {
+  margin: 4px 0;
+}
+
+.footer-note {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .header-inner {
+    height: 56px;
+  }
+
+  .brand-main { font-size: 18px; }
+  .brand-sub { display: none; }
+
+  .global-nav ul { gap: 16px; }
+  .global-nav a { font-size: 13px; }
+
+  .hero { padding: 40px 0 32px; }
+  .hero-title { font-size: 24px; }
+  .hero-lead { font-size: 14px; }
+
+  .section { padding: 40px 0; }
+  .section-title { font-size: 20px; }
+
+  .company-card { padding: 20px 18px; }
+  .company-name { font-size: 17px; }
+
+  .company-table { font-size: 13px; }
+  .company-table th,
+  .company-table td {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+  }
+  .company-table th {
+    background: #fafbfc;
+    border-bottom: none;
+    padding-bottom: 4px;
+    white-space: normal;
+  }
+  .company-table td {
+    padding-top: 4px;
+    padding-bottom: 12px;
+  }
+}
