@@ -59,24 +59,14 @@ a:hover { opacity: 0.7; transition: opacity 0.2s; }
 
 .brand {
   display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-  color: #fff;
+  align-items: center;
   flex-shrink: 0;
 }
 
-.brand-mark {
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--color-accent);
-}
-
-.brand-name {
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  color: #cccccc;
-  margin-top: 2px;
+.brand-logo {
+  display: block;
+  height: 44px;
+  width: auto;
 }
 
 .global-nav {
@@ -138,12 +128,18 @@ a:hover { opacity: 0.7; transition: opacity 0.2s; }
 }
 
 /* ============================================
-   Page Title Band (teal)
+   Page Title Band (本家 head2-tq.png をhotlink)
    ============================================ */
 .page-title {
-  background: var(--color-accent);
+  min-height: 170px;
+  background-image: url("https://aozora-cg.com/wp-content/uploads/2025/08/head2-tq.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-accent);
   color: #ffffff;
-  padding: 56px 0;
+  display: flex;
+  align-items: center;
   position: relative;
   overflow: hidden;
 }
@@ -151,28 +147,19 @@ a:hover { opacity: 0.7; transition: opacity 0.2s; }
 .page-title-inner {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 32px;
+  width: 100%;
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.page-title-deco {
-  display: inline-block;
-  width: 60px;
-  height: 4px;
-  background: #ffffff;
-  transform: skewX(-30deg);
-  flex-shrink: 0;
 }
 
 .page-title-text {
-  font-size: 36px;
-  font-weight: 500;
+  font-size: 38px;
+  font-weight: 700;
   letter-spacing: 0.2em;
   margin: 0;
   line-height: 1;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 /* ============================================
@@ -314,20 +301,11 @@ a:hover { opacity: 0.7; transition: opacity 0.2s; }
   gap: 48px;
 }
 
-.footer-brand-mark {
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--color-accent);
-  margin: 0;
-  line-height: 1;
-}
-
-.footer-brand-name {
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  color: #cccccc;
-  margin: 4px 0 20px;
+.footer-brand-logo {
+  display: block;
+  height: 56px;
+  width: auto;
+  margin: 0 0 20px;
 }
 
 .footer-addr {
