@@ -1,4 +1,4 @@
-# demo-acg-hp
+# wp-acg-hp
 
 あおぞらケアグループ (A.C.G) 会社概要 **仮公開ページ**。
 
@@ -6,8 +6,7 @@
 
 ## 公開URL
 
-GitHub Pages 有効化後：
-- `https://yasushihonda-acg.github.io/demo-acg-hp/`
+- `https://yasushihonda-acg.github.io/wp-acg-hp/`
 
 ## 構成
 
